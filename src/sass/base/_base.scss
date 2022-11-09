@@ -1,0 +1,28 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+} 
+
+body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: $color-background-3;
+    @include respond (ultra-deskstop) {zoom: 150%;}
+}
+
+::-webkit-scrollbar {
+    width: 0; 
+    background: transparent;
+}
+
+::selection {
+    background-color: $color-primary-one-2;
+    color: $color-primary-two-1;
+}

@@ -1,0 +1,340 @@
+.navigation {
+    width: 100%;
+    height: 10rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $color-background-2;
+    box-shadow: $shadow-xsmall-black;
+    padding: 0rem 4rem;
+    
+	position: sticky;
+	top: 0rem;
+    z-index: 101;
+
+    margin-top: 3rem;
+
+    @include respond(tab-land) {
+        margin-top: 0rem;
+        padding: 0rem 2rem;
+    }
+
+    @include respond(tab-port) {
+        display: block;
+
+        background-color: transparent;
+        box-shadow: none;
+        
+        padding: 0;
+        margin-top: 0rem;
+        width: auto;
+    }
+
+    &__checkbox {display: none;}
+
+    &__button {
+        display: none;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 3rem;
+        right: 4rem;
+        border-radius: 50%;
+        background-color: $color-background-2;
+        text-align: center;
+        cursor: pointer;
+        z-index: 8000;
+        transition: background-color .9s;
+
+        box-shadow: .5rem .2rem 5rem rgba($color-black, .3);
+
+        @include respond(tab-port) {display: block;}
+
+        @include respond(phone) {
+            top: 2rem;
+            right: 2rem;
+        }
+    }
+
+    &__background {
+        display: none;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        background-color: $color-background-2;
+        position: fixed;
+        top: 3rem;
+        right: 4rem;
+        z-index: 4000;
+        transition: transform .8s 
+                    cubic-bezier(0.86, 0, 0.87, 1);
+
+        @include respond(tab-port) {display: block;}
+
+        @include respond(phone) {
+            top: 2rem;
+            right: 2rem;
+        }
+    }
+
+    &__icon {
+        display: none;
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before {top: -.8rem;}
+        &::after {top: .8rem;}
+
+        @include respond(tab-port) {display: inline-block;}
+    }
+
+    &__logo {
+        flex: 0 1 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        @include respond(tab-land) {flex: 0 1 25%;}
+
+        @include respond(tab-port) {display: none;}
+    }
+
+    &__image {
+        height: 100%;
+        width: auto;
+    }
+
+    &__caption {
+        width: 20rem;
+        line-height: 2.2rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        letter-spacing: .2rem;
+
+        &--1 {
+            display: inline-block;
+            color: $color-secondary-one-1;
+        }
+
+        &--2 {
+            display: inline-block;
+            color: $color-primary-one-1;
+        }
+
+        &--3 {
+            display: inline-block;
+            color: $color-secondary-two-1;
+        }
+
+        @include respond(tab-land) {
+            line-height: 2rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex: 0 1 70%;
+        justify-content: flex-end;
+        align-items: center;
+
+        @include respond(desktop) {flex: 0 1 75%;}
+
+        @include respond(tab-port) {
+            width: 0;
+            opacity: 0;
+
+            justify-content: space-between;
+            flex-direction: column;
+
+            position: fixed;
+            bottom: 33.3%;
+            left: -20rem;
+
+            height: 50vh;
+
+            z-index: 5000;
+            transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        align-items: center;
+        margin-right: 5rem;
+
+        @include respond(tab-land) {
+            flex: 0 1 50%;
+            margin-right: 3rem;
+        }
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            margin-right: 0rem;
+            justify-content: space-around;
+            flex: 0 1 100%;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__item {
+        padding: 1.5rem 0rem;
+        position: relative;
+        cursor: pointer;
+        transition: all .2s;
+        letter-spacing: .3rem;
+        text-align: center;
+
+        @include respond(desktop) {padding: 1rem 0rem;}
+
+        @include respond(tab-land) {letter-spacing: 0;}
+
+        @include respond(tab-port) {
+            letter-spacing: .3rem;
+            padding: 2.3rem 0rem;
+
+            &:not(:last-child){margin-bottom: 1.5rem;}
+        }
+
+        @include respond(phone) {padding: 1.5rem 0rem}
+
+    }
+
+    &__item:hover {
+        box-shadow: .2rem .5rem 1rem 
+                    rgba($color-primary-one-1, .4);
+        transform: scale(1.1);
+    }
+
+    &__item:hover > &__link {color: $color-white;}
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 100%;
+        width: 0;
+        z-index: 0;
+        background-color: $color-secondary-two-1;
+        transform: scaleY(0);
+        transition: transform .2s, 
+                    width .3s cubic-bezier(1,0,0,1) .15s,
+                    background-color .1s;
+    }
+
+    &__item:hover::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            position: relative;
+            font-size: $normal-button-font-size;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color-primary-one-1;
+            z-index: 1000;
+            transition: all .3s;
+            padding: 1.5rem 3.2rem;
+
+            @include respond(desktop) {
+                font-size: $small-button-font-size;
+                padding: 1rem 1.5rem;
+            }
+
+            @include respond(tab-land) {
+                font-size: $xsmall-button-font-size;
+            }
+
+            @include respond(tab-port) {
+                font-size: $big-button-font-size;
+                font-weight: 600;
+                padding: 2.3rem 4rem;
+            }
+
+            @include respond(phone) {
+                font-size: $normal-button-font-size ;
+                font-weight: 600;
+                padding: 1.5rem 3rem
+            }
+        }
+
+        &--active {
+            &:link,
+            &:visited {
+                background-color: $color-secondary-two-1;
+                color: $color-white;
+            }
+        }
+    }
+
+    &__item--active > &__link {color: $color-white;}
+
+    &__list + .button-group button {
+        @include respond(tab-port) {
+            padding: 2.5rem 13rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        @include respond(phone) {
+            padding: 2.5rem 10rem;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+
+    &__button:hover &__icon::before {top: -1rem;}
+
+    &__button:hover &__icon::after {top: 1rem;}
+
+    &__checkbox:checked + &__button {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    &__checkbox:checked + &__button &__icon {background-color: transparent;}
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    &__checkbox:checked ~ &__background {transform: scale(80);}
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+        transform: translateX(20rem);
+    }
+}

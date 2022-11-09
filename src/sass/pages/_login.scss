@@ -1,0 +1,68 @@
+.section-login{
+    position: relative;
+    background-color: $color-primary-one-1;
+    width: 100vw;
+    height: 100vh;
+    
+    &__background{
+        position: absolute;
+        background-image: url(../../Assets/Images/gif.gif);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.2;
+        z-index: 10;
+        width: 100vw;
+        height: 100vh;
+    }
+    &__form{
+        max-width: 50%;
+        @include absCenter;
+        z-index: 20;
+        padding: 8rem {bottom: 6rem; top: 7rem};
+        background-color: $color-primary-one-1;
+        border-radius: 5rem;
+        box-shadow: $shadow-large-black;
+        
+        @include respond(tab-land) {
+            padding: 5rem;
+        }
+    
+        @include respond(tab-port) {
+            max-width: none;
+            width: 75%;
+        }
+    
+        @include respond(phone) {
+            padding: 2rem;
+            width: 90%;
+        }
+
+        @media only screen and (max-height: 442px){
+                padding: 0 2rem 1rem 2rem;
+        }
+
+        .button-group {
+            margin-top: 5rem;
+
+            @include respond(phone) {
+                margin-top: 0rem;
+            }
+        }
+
+        .heading-secondary {
+            margin-bottom: 5rem;
+
+            @include respond(phone) {
+                margin: 3rem 0rem;
+            }
+            
+        }
+    }
+
+    &__button{
+        display: flex;
+        justify-content: center;
+        margin-top: 1vh;
+    }
+}

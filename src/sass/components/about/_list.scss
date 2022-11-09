@@ -1,0 +1,81 @@
+.list {
+    background-color: $color-background-3;
+    list-style: none;
+    width: 100%;
+    padding: 7rem 15rem 3rem 15rem;
+    box-shadow: $shadow-xlarge-black;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include respond(desktop) {
+        padding: 7rem 10rem 3rem 10rem;
+    }
+
+    @include respond(tab-land) {
+        padding: 7rem 5rem 3rem 5rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 7rem 1rem 3rem 1rem;
+    }
+
+    @include respond(phone) {
+        padding: 7rem 3rem 3rem 3rem;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    &__item {
+        background-color: $color-white;
+        padding: 1rem 2rem;
+        border: 0.2rem solid $color-primary-one-1;
+        border-radius: 2rem;
+        flex: 0 0 48%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 5rem;
+
+        @include respond(phone) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__logo {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        padding: .7rem;
+        border: 2px solid $color-primary-one-1;
+        background-color: $color-background-3;
+
+        @include respond(tab-port) {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+    &__text {
+        margin-left: 3rem;
+        font-size: 1.6rem;
+        line-height: 3.3rem;
+        letter-spacing: .1rem;
+
+        @include respond(desktop) {
+            font-size: 1.4rem;
+        }
+
+        @include respond(tab-port) {
+            font-size: 1.2rem;
+            margin-left: 1rem;
+            line-height: 3rem;
+            letter-spacing: 0rem;
+        }
+
+        @include respond(phone) {
+            line-height: 2.7rem;
+        }
+    }
+}

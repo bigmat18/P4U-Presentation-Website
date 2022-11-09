@@ -1,0 +1,112 @@
+// --------------- PALETTE COLOR --------------
+
+// ----------- PRIMARY ---------
+$color-primary-one-1    : #4E5169;
+$color-primary-one-2    : #6B6F8C;
+$color-primary-one-3    : #9093A9;
+$color-primary-one-4    : #B4B6C5;
+$color-primary-one-5    : #DADAE1;
+
+$color-primary-two-1    : #F8F4D9;
+
+$color-primary-two-2    : #C9C7BC;
+$color-primary-two-3    : #9D9B93;
+$color-primary-two-4    : #6F6F69;
+$color-primary-two-5    : #434341;
+// ----------- PRIMARY ---------
+
+// ----------- SECONDARY ---------
+$color-secondary-one-1  : #1A94C4;
+
+$color-secondary-one-2  : #49A9D0;
+$color-secondary-one-3  : #75BEDB;
+$color-secondary-one-4  : #A4D3E6;
+$color-secondary-one-5  : #D0E9F2;
+
+$color-secondary-two-1  : #F2055C;
+
+$color-secondary-two-2  : #C71B5A;
+$color-secondary-two-3  : #9A1849;
+$color-secondary-two-4  : #6F1937;
+$color-secondary-two-5  : #421727;
+// ----------- SECONDARY ---------
+
+// ----------- NOTE ---------
+$color-note-1   : #FFC32A;
+
+$color-note-2   : #FED264;
+$color-note-3   : #FEDD8B;
+$color-note-4   : #FEE8B1;
+$color-note-5   : #FFF3D7;
+// ----------- NOTE ---------
+
+// ----------- BACKGROUND ---------
+$color-background-1   : #F0F0F5;
+$color-background-2   : #F8F4D9;
+$color-background-3   : #E6F8FE;
+$color-background-4   : #FEE6EF;
+$color-background-5   : #FFF8E6;
+// ----------- BACKGROUND ---------
+
+// ----------- BASE ---------
+$color-grey-light-1   : #f7f7f7;
+$color-grey-light-2   : #eee;
+
+$color-grey-dark      : #777;
+$color-grey-dark-2    : #999;
+$color-grey-dark-3    : #333;
+
+$color-white          : #fff;
+$color-black          : #000;
+// ----------- BASE ---------
+
+// --------------- PALETTE COLOR --------------
+
+
+
+// ------------------- FONT SIZE --------------
+$default-font-size        : 1.6rem;
+$xsmall-title-font-size   : 2.1rem;
+$small-title-font-size    : 2.7rem;
+$normal-title-font-size   : 3.2rem;
+$large-title-font-size    : 3.5rem;
+$xlarge-title-font-size   : 6rem;
+
+$xsmall-button-font-size  : 1.5rem;
+$small-button-font-size   : 1.8rem;
+$normal-button-font-size  : 2.2rem;
+$big-button-font-size     : 4rem;
+// ------------------- FONT SIZE --------------
+
+
+
+// ------------------- MARGIN SIZE --------------
+$margin-xsmall    : 1.7rem;
+$margin-small     : 3rem;
+$margin-medium    : 5rem;
+$margin-large     : 8rem;
+$margin-xlarge    : 12rem;
+$margin-xxlarge   : 18rem;
+$margin-xxxlarge  : 25rem;
+// ------------------- MARGIN SIZE --------------
+
+
+
+// ------------------- MEDIA QUERY --------------
+$phone          : 31.25em;      // 500px
+$tab-port       : 62.5em;       // 1000px
+$tab-land       : 81.25em;      // 1300px
+$desktop        : 106.25em;     // 1600px
+$big-deskstop   : 125em;        // 2000px
+$ultra-deskstop : 162.5em;      // 2600px
+// ------------------- MEDIA QUERY --------------
+
+
+
+// ------------------- BOX SHADOW --------------
+$shadow-xsmall-black: 0rem 1rem 4rem rgba($color-black, .25);
+$shadow-small-black: 1rem .1rem 4rem rgba($color-black, .3);
+$shadow-normal-black: .2rem .1rem 4rem rgba($color-black, .4);
+$shadow-large-black: .2rem 1rem 4rem rgba($color-black, .4);
+$shadow-xlarge-black: .2rem .1rem 5rem rgba($color-black, .5);
+// ------------------- BOX SHADOW --------------

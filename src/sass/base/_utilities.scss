@@ -1,0 +1,188 @@
+  
+.u-center-text {text-align: center !important;}
+
+.u-left-text {text-align: left !important;}
+
+.u-right-text {text-align: right !important;}
+
+// ------------------- DIFFERENCE --------------
+$desktop-diff: 1.2;
+$tab-land-diff: 2;
+$tab-port-diff: 1.2;
+$phone-diff: 5;
+// ------------------- DIFFERENCE --------------
+
+
+// ------------------- MARGIN LEFT --------------
+.u-margin-left-xsmall {margin-left: $margin-xsmall !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xsmall} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-left-small {margin-left: $margin-small !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-small} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-left-medium {margin-left: $margin-medium !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-medium} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-left-large {margin-left: $margin-large !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-large} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-left-xlarge {margin-left: $margin-xlarge !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xlarge} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-left-xxlarge {margin-left: $margin-xxlarge !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xxlarge} / #{$tab-port-diff}) !important;
+    }
+}
+// ------------------- MARGIN LEFT --------------
+
+
+
+// ------------------- MARGIN RIGHT --------------
+.u-margin-right-xsmall {margin-right: $margin-xsmall !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xsmall} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-right-small {margin-right: $margin-small !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-small} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-right-medium {margin-right: $margin-medium !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-medium} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-right-large {margin-right: $margin-large !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-large} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-right-xlarge {margin-right: $margin-xlarge !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xlarge} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-right-xxlarge {margin-right: $margin-xxlarge !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xxlarge} / #{$tab-port-diff}) !important;
+    }
+}
+// ------------------- MARGIN RIGHT --------------
+
+
+
+// ------------------- MARGIN BOTTOM --------------
+.u-margin-bottom-xsmall {margin-bottom: $margin-xsmall !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xsmall} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-bottom-small {margin-bottom: $margin-small !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-small} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-bottom-medium { margin-bottom: $margin-medium !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-medium} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-bottom-large { margin-bottom: $margin-large !important; 
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-large} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-bottom-xlarge {margin-bottom: $margin-xlarge !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xlarge} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-bottom-xxlarge {margin-bottom: $margin-xxlarge !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xxlarge} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-bottom-xxxlarge {margin-bottom: $margin-xxxlarge !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xxxlarge} / #{$tab-port-diff}) !important;
+    }
+}
+// ------------------- MARGIN BOTTOM --------------
+
+
+
+// ------------------- MARGIN TOP --------------
+.u-margin-top-xsmall {margin-top: $margin-xsmall !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xsmall} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-top-small {margin-top: $margin-small !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-small} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-top-medium { margin-top: $margin-medium !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-medium} / #{$tab-port-diff}) !important;
+    }
+
+    @include respond(phone) {
+        margin-bottom: calc(#{$margin-medium} / #{$phone-diff}) !important;
+    }
+}
+
+.u-margin-top-large {margin-top: $margin-large !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-large} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-top-xlarge {margin-top: $margin-xlarge !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xlarge} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-top-xxlarge {margin-top: $margin-xxlarge !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xxlarge} / #{$tab-port-diff}) !important;
+    }
+}
+
+.u-margin-top-xxxlarge {margin-top: $margin-xxxlarge !important;
+    @include respond(tab-port) {
+        margin-bottom: calc(#{$margin-xxxlarge} / #{$tab-port-diff}) !important;
+    }
+}
+// ------------------- MARGIN TOP --------------

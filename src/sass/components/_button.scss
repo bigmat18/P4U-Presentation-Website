@@ -1,0 +1,284 @@
+.button-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+     }
+
+    &--center {width: 100%;}
+
+    &--left {
+        justify-content:flex-start;
+    
+        @include respond(tab-port) {
+            flex-direction: row;
+            justify-content: space-around;
+         }
+    }
+
+    &--left .button-text:not(:first-child){
+        margin-left: 5rem;
+
+        @include respond(tab-port) {
+            margin-left: 0rem;
+        }
+    }
+
+    &--left .button-text:not(:first-child){
+        margin-left: 5rem;
+
+        @include respond(tab-port) {
+            margin-left: 0rem;
+        }
+    }
+}
+
+.button-round {
+    &,
+    &:link, 
+    &:visited {
+        display: inline-block;
+        text-decoration: none;
+        
+        border-radius: 10rem;
+        border: none;
+        cursor: pointer;
+        box-shadow: $shadow-small-black;
+        transition: all .2s;
+        position: relative;
+
+        background-color: $color-white;
+        color: $color-black;
+    }
+
+    &--normal {
+        padding: 1.5rem 3rem;
+        font-size: $small-button-font-size;
+        font-weight: 600;
+
+        @include respond(tab-land) {
+            font-size: $xsmall-button-font-size;
+            padding: 1.3rem 2rem;
+        }
+    }
+
+    &--big {
+        padding: 1.7rem 3.5rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+
+        @include respond(tab-land) {
+            padding: 1.7rem 3.2rem;
+            font-size: 2.2rem;
+        }
+
+        @include respond(phone) {
+            padding: 1.2rem 2.3rem;
+            font-size: 2rem;
+        }
+    }
+
+    &--ultra {
+        padding: 2.5rem 6rem;
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+
+        @include respond(desktop) {
+            padding: 2.5rem 5rem;
+            font-size: 2.7rem;
+        }
+
+        @include respond(tab-land) {
+            padding: 2.3rem 4rem;
+            font-size: 2.2rem;
+        }
+
+        @include respond(phone) {
+            padding: 2rem 1.5rem;
+            font-size: 2rem;
+        }
+    }
+
+    &--pink {
+        background-color: $color-secondary-two-1;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-secondary-two-1;
+        }
+    }
+
+    &--blue {
+        background-color: $color-secondary-one-1;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-secondary-one-1;
+        }
+    }
+
+    &--yellow {
+        background-color: $color-background-2;
+        color: $color-primary-one-1;
+
+        &::after {
+            background-color: $color-background-2;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-.3rem) scale(1.05);
+        box-shadow: $shadow-normal-black;
+            
+        &:after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-0.1rem);
+    }
+
+    &:not(:last-child) {
+        margin-right: 4rem;
+
+        @include respond(tab-land) {
+            margin-right: 2rem;
+        }
+
+        @include respond(tab-port) {
+            margin-right: 0rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &--shadow:hover {
+        transform: translateY(-.3rem);
+    }
+
+    &--shadow::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+
+}
+
+.button-text {
+    width: max-content;
+    transition: all .2s;
+    display: flex;
+    flex-direction: column;
+
+    &--yellow &__btn, &__btn + hr {
+        color: $color-primary-two-1;
+    }
+
+    &--yellow &__icon {
+        fill: $color-primary-two-1;
+    }
+
+    &--yellow &__btn + hr {
+        border: transparent {
+            top: 1px solid $color-primary-two-1;
+        };
+    }
+
+    &__icon {
+        height: 8rem;
+        margin-top: .7rem;
+        cursor: pointer;
+        animation: upBottomArrow 2.5s infinite;
+
+        @include respond(phone) {
+            margin-top: .8rem;
+            height: 4rem;
+        }
+    }
+    
+    &__btn {
+        width: max-content;
+        display: inline-block;
+        text-decoration: none;
+        
+        border: none;
+        cursor: pointer;
+        transition: all .2s;
+    
+        background-color: transparent;
+        color: $color-primary-one-1;
+
+        &--normal{
+            padding: 1rem;
+            font-size: 2.2rem;
+            font-weight: 400;
+        }
+
+        &--large {
+            padding: 1rem;
+            font-size: 2.6rem;
+            font-weight: 400;
+
+            @include respond(phone) {
+                font-size: 1.7rem;
+            }
+        }
+
+        & + hr {
+            width: 70%;
+            border: transparent {
+                top: 1px solid $color-primary-one-1;
+            };
+
+            @-moz-document url-prefix() {
+                width: 20%;
+
+                @include respond(phone) {
+                    width: 10%;
+                }
+              }
+            
+            @include respond(phone) {
+                width: 40%;
+            }
+        }
+
+        &:focus {
+            outline: none;
+            animation: pulsateBtn 1s infinite;
+        }
+
+        &:focus ~ hr {
+            animation: pulsateBtn 1s infinite;
+        }
+    }
+    
+    &:hover {transform: scale(1.1);}
+
+
+    &--left {align-items: flex-start;}
+
+    &--right {align-items: flex-end;}
+
+    &--left {align-items: flex-start;}
+
+    &--left &__btn {padding-left: 0rem;}
+
+    &--right &__btn {padding-right: 0rem;}
+
+    &--center {align-items: center;}
+}

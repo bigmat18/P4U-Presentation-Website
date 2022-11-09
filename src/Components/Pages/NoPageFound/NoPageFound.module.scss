@@ -1,0 +1,17 @@
+.error {
+  background-color: rgba(78, 81, 105, 0.92);
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 10px 10px 30px 3px rgba(0, 0, 0, 0.3);
+}
+.center {
+  background-color: #4e5169;
+  background-image: url(../../../Assets/Images/Asteroid.png);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

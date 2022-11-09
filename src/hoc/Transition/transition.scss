@@ -1,0 +1,9 @@
+.transition{
+    &__svg{
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 200;
+    pointer-events: none;
+    }
+}
